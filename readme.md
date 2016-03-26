@@ -1,9 +1,15 @@
 # Image gallery
 >This project is build using PhalconPHP and Angular2
 
-To get started, install Phalcon on your webserver. (Visit [PhalconPHP](https://phalconphp.com/en/download) for more information).
+To get started, install Phalcon on your webserver. Visit [PhalconPHP](https://phalconphp.com/en/download) for more information.
 
-Clone the project:
+You also need to install __Phalcon DevTools__ (Follow link above)
+
+Clone the project: [__SSH__](git@github.com:dansker/Image-Gallery.git) | [__HTTPS__](https://github.com/dansker/Image-Gallery.git)
+
+Configuration file is located at [Project name]/app/config/config.php
+
+In your terminal, Execute command _phalcon migration run_
 
 Install npm dependencies: _npm install_
 
