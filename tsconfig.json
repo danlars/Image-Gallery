@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "./public/js/",
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "filesGlob": [
+    "./scripts/**/*.*"
+  ],
+  "exclude": [
+    "node_modules",
+    "bower_components"
+  ]
+}

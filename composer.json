@@ -1,0 +1,7 @@
+{
+    "name": "image/gallery",
+    "description": "Gallery for images",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}

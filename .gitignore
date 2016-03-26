@@ -1,0 +1,11 @@
+.idea
+
+.phalcon/*
+app/cache/*
+
+public/css/*
+public/js/*
+public/libs/*
+
+bower_components
+node_modules

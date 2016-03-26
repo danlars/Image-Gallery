@@ -1,0 +1,26 @@
+{
+  "name": "gallery",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Daniel Joachim Larsen"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.0",
+    "jquery": "^2.2.2"
+  }
+}
