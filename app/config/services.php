@@ -23,6 +23,10 @@ try {
      */
     $di = new FactoryDefault();
 
+    $di->set('router', function () {
+        require APP_PATH . '/app/config/router.php';
+        return $router;
+    });
 
     /**
      * We register the events manager
@@ -124,10 +128,10 @@ try {
      */
     $di->set('flash', function () {
         return new Flash(array(
-            'error' => 'alert-box alert radius',
-            'success' => 'alert-box success radius',
-            'notice' => 'alert-box info radius',
-            'warning' => 'alert-box warning radius'
+            'error' => 'callout small alert',
+            'success' => 'callout small success',
+            'notice' => 'callout small primary',
+            'warning' => 'callout small warning'
         ));
     });
 } catch (\Phalcon\Exception $e) {

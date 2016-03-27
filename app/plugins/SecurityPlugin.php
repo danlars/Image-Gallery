@@ -20,7 +20,8 @@ class SecurityPlugin extends Plugin
      */
     public function getAcl()
     {
-        if (!isset($this->persistent->acl)) {
+        //if (!isset($this->persistent->acl)) {
+        if(true) {
             $acl = new AclList();
             $acl->setDefaultAction(Acl::DENY);
             // Register roles
@@ -39,14 +40,14 @@ class SecurityPlugin extends Plugin
             }
             //Private area resources
             $privateResources = array(
-                'index'    => array('index'),
+                'index'    => array('index')
             );
             foreach ($privateResources as $resource => $actions) {
                 $acl->addResource(new Resource($resource), $actions);
             }
             //Public area resources
             $publicResources = array(
-                'login'      => array('index', 'authenticate'),
+                'login'      => array('index', 'authenticate', 'logout'),
                 'errors'     => array('show404', 'show401', 'show500')
             );
             foreach ($publicResources as $resource => $actions) {

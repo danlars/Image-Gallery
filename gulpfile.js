@@ -35,8 +35,9 @@ gulp.task('moveToLibs', function (done) {
         'node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
         'node_modules/reflect-metadata/Reflect.*js*',
         'node_modules/systemjs/dist/*.*',
-        'bower_components/jquery/dist/jquery.*js',
-        'bower_components/foundation-sites/dist/foundation*.js',
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/foundation-sites/dist/foundation.min.js',
+        'bower_components/what-input/what-input.min.js',
         'node_modules/rxjs/bundles/Rx.js',
         'node_modules/zone.js/dist/zone.js'
     ]).pipe(gulp.dest('./public/libs/'));

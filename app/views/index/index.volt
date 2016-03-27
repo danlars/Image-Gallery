@@ -8,6 +8,8 @@
 {{ javascript_include("libs/zone.js") }}
 {{ javascript_include("libs/angular2.dev.js") }}
 {{ javascript_include("libs/router.dev.js") }}
+{{ javascript_include("libs/http.dev.js") }}
+
 <script>
     System.config({
         packages: {
@@ -21,6 +23,5 @@
     System.import('js/boot')
             .then(null, console.error.bind(console));
 </script>
-<base href="/">
 
 <my-gallery>Loading...</my-gallery>

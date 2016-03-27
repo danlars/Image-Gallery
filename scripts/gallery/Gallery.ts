@@ -1,21 +1,20 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, Router} from "angular2/router";
-import {IndexComponent} from "./app/index/index";
-import {TestComponent} from "./app/test/test";
+import {RouteConfig, RouterOutlet, RouterLink} from "angular2/router";
+import {ProfileComponent} from "./app/components/profile/profile";
+import {GalleryComponent} from "./app/components/gallery/gallery";
 
 @Component({
     selector: 'my-gallery',
     templateUrl: './js/gallery/layout.html',
-    directives: [ROUTER_DIRECTIVES]
+    directives: [RouterOutlet, RouterLink],
+    providers: []
 })
 
 @RouteConfig([
-    {path:'/index', name: 'Index', component: IndexComponent},
-    {path:'/test', name: 'Test', component: TestComponent},
+    {path: '/', component: ProfileComponent, name: 'Profile', useAsDefault: true},
+    {path:'/gallery', name: 'Gallery', component: GalleryComponent},
 ])
 
 export class AppComponent {
-    constructor(private router: Router){
-        router.navigate(['Index']);
-    }
+
 }

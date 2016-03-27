@@ -5,7 +5,7 @@ To get started, install Phalcon on your webserver. Visit [PhalconPHP](https://ph
 
 You also need to install __Phalcon DevTools__ (Follow link above)
 
-Clone the project: [__SSH__](git@github.com:dansker/Image-Gallery.git) | [__HTTPS__](https://github.com/dansker/Image-Gallery.git)
+Clone the project.
 
 Configuration file is located at [Project name]/app/config/config.php
 

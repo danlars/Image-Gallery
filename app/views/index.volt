@@ -11,7 +11,8 @@
         {{ content() }}
     </body>
     {{ javascript_include("libs/jquery.min.js") }}
-    {{ javascript_include("libs/foundation.js") }}
+    {{ javascript_include("libs/what-input.min.js") }}
+    {{ javascript_include("libs/foundation.min.js") }}
     <script>
         $(document).foundation();
     </script>

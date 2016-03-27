@@ -2,6 +2,7 @@
 
 .phalcon/*
 app/cache/*
+composer.lock
 
 public/css/*
 public/js/*

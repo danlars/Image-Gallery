@@ -3,5 +3,7 @@
     "description": "Gallery for images",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "phalcon/devtools": "^2.0"
+    }
 }

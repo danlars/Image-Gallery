@@ -21,6 +21,7 @@ class LoginController extends ControllerBase
     {
         try {
             $form = new LoginForm();
+
             if ($this->request->isPost() && $form->isValid($this->request->getPost())) {
                 $username = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
@@ -39,10 +40,15 @@ class LoginController extends ControllerBase
                 }
             }
 
-            return (new Response)->redirect('login/index');
+            return $this->response->redirect('login');
         } catch(Phalcon\Exception $e) {
             return $e->getMessage();
         }
+    }
+
+    public function logoutAction(){
+        $this->session->remove('auth');
+        return $this->response->redirect('login');
     }
 }
 
