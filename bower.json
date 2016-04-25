@@ -20,7 +20,8 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-sites": "^6.2.0",
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "bootstrap-sass": "boostrap-sass#^3.3.6",
+    "font-awesome": "^4.5.0"
   }
 }

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            This is IndexComponent<br/>
+            <button (click)="getData()">Get</button>
+            <p>getData: {{ getResultData }}</p>
+            <button (click)="postData()">Post</button>
+            <p>postData: {{ postResultData }}</p>
+        </div>
+    </div>
+
+
+    <alert type="info">Hej</alert>
+
+    <form>
+        <div class="form-group">
+            <label for="email">Email <small>required</small></label>
+            <input id="email" class="form-control" type="email" required>
+        </div>
+
+        <div class="form-group">
+                <label for="password">Password <small>required</small></label>
+                <input id="password" class="form-control" type="password" required>
+                <!--<small class="error">Password must be 8 characters long and contain (at least) one number, upper and lowercase letters</small>-->
+        </div>
+
+        <button class="btn btn-primary pull-right" type="submit">Submit</button>
+    </form>
+</div>

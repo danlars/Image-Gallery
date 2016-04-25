@@ -12,7 +12,7 @@ import {GalleryComponent} from "./app/components/gallery/gallery";
 
 @RouteConfig([
     {path: '/', component: ProfileComponent, name: 'Profile', useAsDefault: true},
-    {path:'/gallery', name: 'Gallery', component: GalleryComponent},
+    {path:'/gallery', component: GalleryComponent,  name: 'Gallery'},
 ])
 
 export class AppComponent {

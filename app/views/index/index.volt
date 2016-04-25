@@ -9,12 +9,18 @@
 {{ javascript_include("libs/angular2.dev.js") }}
 {{ javascript_include("libs/router.dev.js") }}
 {{ javascript_include("libs/http.dev.js") }}
+{{ javascript_include("libs/ng2-bootstrap.min.js") }}
+
 
 <script>
     System.config({
         packages: {
             js: {
                 defaultExtension: 'js'
+            },
+            map: {
+                'ng-2bootstrap': 'libs/ng2-bootstrap.js',
+                moment: '/libs/moment.js'
             }
         }
     });

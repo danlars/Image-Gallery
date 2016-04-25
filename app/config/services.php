@@ -128,10 +128,10 @@ try {
      */
     $di->set('flash', function () {
         return new Flash(array(
-            'error' => 'callout small alert',
-            'success' => 'callout small success',
-            'notice' => 'callout small primary',
-            'warning' => 'callout small warning'
+            'error' => 'alert alert-danger',
+            'success' => 'alert alert-success',
+            'notice' => 'alert alert-info',
+            'warning' => 'alert alert-warning'
         ));
     });
 } catch (\Phalcon\Exception $e) {

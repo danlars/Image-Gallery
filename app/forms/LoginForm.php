@@ -23,7 +23,8 @@ class LoginForm extends Form{
         $Email->setFilters(array('striptags', 'string'));
         $Email->setAttributes(array(
             'placeholder' => 'contoso@mail.com',
-            'value'       => ''
+            'value'       => '',
+            'class'       => 'form-control'
         ));
         $Email->addValidators(array(
             new PresenceOf(array(
@@ -39,7 +40,8 @@ class LoginForm extends Form{
         $password->setFilters(array('striptags', 'string'));
         $password->setAttributes(array(
             'placeholder' => 'password',
-            'value'       => ''
+            'value'       => '',
+            'class'       => 'form-control'
         ));
         $password->addValidators(array(
             new PresenceOf(array(

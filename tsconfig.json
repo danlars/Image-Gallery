@@ -2,7 +2,8 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "module": "system",
+    "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
     "outDir": "./public/js/",
@@ -11,10 +12,15 @@
     "target": "es5"
   },
   "filesGlob": [
-    "./scripts/**/*.*"
+    "./src/scripts/**/*.*"
   ],
   "exclude": [
     "node_modules",
-    "bower_components"
-  ]
+    "bower_components",
+    "typings/main",
+    "typings/main.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

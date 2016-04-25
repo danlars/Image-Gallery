@@ -1,14 +1,15 @@
 var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    watch = require('gulp-watch'),
     typescript = require('gulp-typescript'),
     tsConfig = require('./tsconfig.json'),
-    watch = require('gulp-watch'),
 
     tsProject = typescript.createProject(tsConfig.compilerOptions);
 
-var scriptStaticFiles = ['scripts/**/*.html'];
+var scriptStaticFiles = ['src/scripts/**/*.html'];
 
 gulp.task('copy:typescript', function(){
-    gulp.src(['scripts/**/*.ts'])
+    gulp.src(['src/scripts/**/*.ts'])
         .pipe(typescript(tsProject))
         .pipe(gulp.dest('./public/js/'))
 });
@@ -20,7 +21,7 @@ gulp.task('copy:staticFiles', function(){
 
 gulp.task('watch:script', ['copy:staticFiles', 'copy:typescript'], function(){
         gulp.watch(scriptStaticFiles, ['copy:staticFiles']);
-        gulp.watch(['scripts/**/*.ts'], ['copy:typescript']);
+        gulp.watch(['src/scripts/**/*.ts'], ['copy:typescript']);
 });
 
 gulp.task('moveToLibs', function (done) {
@@ -36,13 +37,14 @@ gulp.task('moveToLibs', function (done) {
         'node_modules/reflect-metadata/Reflect.*js*',
         'node_modules/systemjs/dist/*.*',
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/foundation-sites/dist/foundation.min.js',
-        'bower_components/what-input/what-input.min.js',
+        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
         'node_modules/rxjs/bundles/Rx.js',
-        'node_modules/zone.js/dist/zone.js'
+        'node_modules/zone.js/dist/zone.js',
+        'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js',
+        'node_modules/moment/moment.js'
     ]).pipe(gulp.dest('./public/libs/'));
-
-    gulp.src([
-        'bower_components/foundation-sites/dist/foundation.min.css'
-    ]).pipe(gulp.dest('./public/css'));
+    
+    return gulp.src('src/styles/main.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('./public/css'));
 });

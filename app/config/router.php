@@ -18,3 +18,8 @@ $router->add(
         'action' => 1
     )
 );
+
+//Groups
+require APP_PATH . '/app/config/routergroup/api.php';
+
+$router->mount($api);

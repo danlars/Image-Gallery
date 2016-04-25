@@ -1,11 +1,13 @@
 import {Component} from 'angular2/core';
 import {httpService} from "../../services/httpService";
 import {Http} from "angular2/http";
+import {Alert} from "ng2-bootstrap/components/Alert";
 
 @Component({
-    selector: 'my-gallery',
+    selector: 'my-profile',
     templateUrl: './js/gallery/app/components/profile/profile.html',
-    providers: [httpService]
+    providers: [httpService],
+    directives: [Alert]
 })
 
 export class ProfileComponent {
